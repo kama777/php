@@ -1,13 +1,6 @@
 # see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
-
-matrix:
-  include:
-    - php: 5.2
-      dist: precise
-    - php: 5.3
-      dist: precise
-      
+    
 # list any PHP version you want to test against
 php:
   # using major version aliases
@@ -37,6 +30,11 @@ matrix:
   allow_failures:
     - php: 7.0
     - php: hhvm
+  include:
+    - php: 5.2
+      dist: precise
+    - php: 5.3
+      dist: precise
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
